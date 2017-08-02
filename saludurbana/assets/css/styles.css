@@ -1,0 +1,195 @@
+*{ 
+    margin: 0;
+    padding: 0;
+    position: relative;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.col4{
+    width: 32%;
+}
+
+.col5{
+    width: 25%;
+}
+
+.col7{
+    width: 70%;
+}
+
+.container{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+header{
+	margin: 0 auto;
+	text-align: center;
+	background-color: #00ACDC;
+}
+ 
+header img{
+	height: 180px;
+    margin: 0 auto;	
+} 
+
+table .tmodal td{
+	border-bottom: 2px solid #00A7A1;
+    border-left: 2px solid #00A7A1;
+    border-right: 2px solid #00A7A1;
+    text-align: left;
+    box-shadow: 0 2px 5px rgba(33,33,33,.4);
+    border-radius: 0 0 10px 10px;
+}
+
+table th{
+	background-color: #00abda;
+	color: #fff;
+}
+
+.chart {
+  width: 100%; 
+  min-height: 300px;
+}
+.titulo{
+	color: #00abda;
+}
+
+.text-preg{
+	font-weight: bold;
+}
+
+form{
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    border: none;
+	min-height: 50px;
+    display: inline-block;
+}
+
+fieldset {
+    display: block;
+    margin-left: 2px;
+    margin-right: 2px;
+    padding-top: 0.35em;
+    padding-bottom: 0.625em;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+    border: 2px groove (internal value);
+	text-align: left;
+}
+
+
+.header-form h3{
+    font-weight: 100;
+    font-size: 1.5em;
+    margin-bottom: -5px;
+}
+
+.header-form h2{
+    font-size: 1.72em;
+}
+
+
+.datos-personales, .info-basica, .pacientes{
+    border-bottom: 2px solid #00A7A1;
+    border-left: 2px solid #00A7A1;
+    border-right: 2px solid #00A7A1;
+    text-align: left;
+    box-shadow: 0 2px 5px rgba(33,33,33,.4);
+    border-radius: 0 0 10px 10px;
+}
+
+label{
+    font-family: 'Open Sans', sans-serif;
+    font-size: .8em;
+    font-weight: 100;
+}
+
+.content-forms{
+    padding: 10px;
+    margin: 5px 0;
+    display: inline-block;
+}
+
+.label-checkbox{
+    margin: 0;
+    font-size: .75em;
+    margin-right: 10px;
+}
+
+input[type=checkbox]{
+    margin: 0 2.5px;
+}
+
+footer{
+    background-color: #014A7E;
+    height: auto;
+    padding: 35px 0 10px;
+    font-size: .8em;
+}
+
+footer h4{
+    font-size: 1.25em;
+    font-weight: 600;
+}
+
+.links-control a, .links-gobierno a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.links-control{
+    color: #fff;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 10px;
+    padding: 0 60px;
+}
+
+.links-gobierno{
+    color: #fff;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 10px;
+}
+
+.info-secretaria{
+    color: #fff;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.info-secretaria li{
+    list-style: none;
+}
+
+.logo-alcaldia-footer{
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+    text-align: center;
+    width: 100%;
+    background-color: #014A7E;
+    padding: 30px 0;
+    margin-top: 25px;
+}
+
+.logo-alcaldia-footer img{
+    width: 200px;
+}
+
+@media screen and (max-width: 1025px){
+    
+    .logo-container{
+        left: 22.5%;
+    }
+    
+    nav{
+        left: 58%;
+    }
+}
