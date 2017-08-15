@@ -95,4 +95,69 @@ class Admin_model extends CI_Model {
         $query = $this->db->query($sql);
         return $query->result(); 
     }
+	
+	public function psalud() {
+        
+		$sql = "SELECT DISTINCT id_punto, direccion, latitud, longitud, zona, sr.Nombre ";
+		$sql .= " FROM pr_puntos_atencion pa  ";
+		$sql .= " JOIN  pr_subred sr ON sr.idSubRed = pa.zona ";
+		$sql .= " ORDER BY 5,2   ";
+		
+        $query = $this->db->query($sql);
+        return $query->result(); 
+    }
+		
+	public function pr_subred() {
+        
+		$sql = "SELECT DISTINCT idSubRed, Codigo, Nombre ";
+		$sql .= " FROM pr_subred  ";
+		$sql .= " ORDER BY 2   ";
+		
+        $query = $this->db->query($sql);
+        return $query->result(); 
+    }
+	
+	public function tipo_escenario() {
+        
+		$sql = "SELECT DISTINCT id_tipo, desc_tipo ";
+		$sql .= " FROM pr_tipo_escenario  ";
+		$sql .= " ORDER BY 2   ";
+		
+        $query = $this->db->query($sql);
+        return $query->result(); 
+    }
+	
+	public function psalud_datos($punto) {
+        
+		$sql = "SELECT DISTINCT id_punto, direccion, latitud, longitud, zona, nombre, tipo_escenario, estado ";
+		$sql .= " FROM pr_puntos_atencion  ";
+		$sql .= " WHERE  id_punto = ".$punto."  ";
+		
+        $query = $this->db->query($sql);
+        return $query->row(); 
+    }
+	
+	public function registrar_punto($datos) {
+        $this->db->trans_start();
+        $this->db->insert('pr_puntos_atencion', $datos);
+        $insert_id = $this->db->insert_id();
+        $this->db->trans_complete();
+        return $insert_id;
+		
+    }
+	
+	public function actualizar_punto($datos) {
+                
+		$data = array(
+            'zona' => $datos['zona'],
+            'nombre' => $datos['nombre'],
+            'direccion' => $datos['direccion'],
+            'tipo_escenario' => $datos['tipo_escenario'],
+            'latitud' => $datos['latitud'],
+            'longitud' => $datos['longitud'],
+            'estado' => $datos['estado']
+        );
+        $this->db->where('id_punto', $datos['id_punto_atencion']);
+        return $this->db->update('pr_puntos_atencion', $data);
+    }
 }

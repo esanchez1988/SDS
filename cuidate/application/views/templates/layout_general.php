@@ -28,6 +28,17 @@
 		</script>
 		<script type="text/javascript" src="<?php echo base_url('assets/js/jquery-2.1.4.min.js')?>"></script>
 		<!--<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBD2Qj1lPP0A2M7JaKB25pY1_c4TDC0muA&region=GB"></script>		-->
+		
+
+		<!-- JavaScript -->
+		<script src="<?php echo base_url('assets/js/alertifyjs/alertify.min.js') ?>"></script>
+
+		<!-- CSS -->
+		<link rel="stylesheet" href="<?php echo base_url('assets/js/alertifyjs/css/alertify.min.css') ?>"/>	
+		<!-- Default theme -->
+		<link rel="stylesheet" href="<?= base_url('assets/js/alertifyjs/css/themes/default.min.css') ?>"/>
+		<!-- Semantic UI theme -->
+		<link rel="stylesheet" href="<?= base_url('assets/js/alertifyjs/css/themes/semantic.min.css') ?>"/>		
 			
 		<script type="text/javascript" src="<?php echo base_url('assets/css/bootstrap/js/bootstrap.js')?>"></script>
 		<script type="text/javascript" src="<?php echo base_url('assets/js/jquery-ui.js')?>"></script>
@@ -39,6 +50,7 @@
 		<script type="text/javascript" src="<?php echo base_url('assets/js/datatable.js')?>"></script>
 		<script type="text/javascript" src="<?php echo base_url('assets/js/chart/loader.js')?>"></script>
 		<script type="text/javascript" src="<?php echo base_url('assets/js/ficha.js')?>"></script>
+		<script type="text/javascript" src="<?php echo base_url('assets/js/puntos.js')?>"></script>
 		<script type="text/javascript" src="<?php echo base_url('assets/js/reportes.js')?>"></script>
 		<script type="text/javascript" src="<?php echo base_url('assets/js/gmap3.js')?>"></script>
 	</head>
@@ -72,7 +84,8 @@
 			switch ($this->session->userdata('perfil')) {
 				case 'administrador':
 					?>
-					<li class="menu-item"><a href="<?php echo base_url('gestor/reportes')?>">Reportes</a></li>
+					<li class="menu-item"><a href="<?php echo base_url('admin/')?>">Reportes</a></li>
+					<li class="menu-item"><a href="<?php echo base_url('admin/puntos')?>">Puntos de Atenci&oacute;n</a></li>
 					<?php					
 					break;
 				case 'gestor':
